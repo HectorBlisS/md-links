@@ -1,4 +1,10 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "bin": {
+    "bliss": "./index.js"
+  },
+  "dependencies": {
+    "markdown-it": "^10.0.0"
+  }
 }
