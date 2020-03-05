@@ -38,8 +38,8 @@ function realFunction(uri, res, rej) {
   };
 }
 
-module.exports = uri => {
+let mdLinks = uri => {
   return new Promise((res, rej) => tryCatch(realFunction(uri, res, rej)));
 };
 
-console.log("bliss");
+module.exports = mdLinks;
