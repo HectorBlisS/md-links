@@ -2,7 +2,7 @@
   "name": "md-links",
   "version": "0.1.0",
   "bin": {
-    "bliss": "./index.js",
+    "bliss": "./ui.js",
     "md-links": "./simple.js"
   },
   "scripts": {
