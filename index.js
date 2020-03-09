@@ -21,7 +21,8 @@ async function init() {
   if (validate) {
     let stats = await questions.askForStats();
     stats = stats.stats === "y" ? true : false;
-    await validateLinks(links, stats);
+    let r = await validateLinks(links, stats);
+    console.log("finally: ", r);
   } else {
     console.log(links);
   }

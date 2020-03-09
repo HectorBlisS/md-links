@@ -4,7 +4,7 @@ const https = require("https");
 let mdLinks = require("./md-links");
 
 let validating = "Validating... | ";
-let counter = 1;
+let counter = 2;
 
 let i = process.argv.indexOf("--file");
 if (i > 0) {
@@ -64,7 +64,6 @@ async function validateLinks(links, stats) {
         if (counter > links.length) {
           console.log(links);
           if (stats) console.log(chalk.yellowBright("Stats: "), totals);
-          return { links, totals };
         }
       }
       // res.on("data", d => {
@@ -81,7 +80,6 @@ async function validateLinks(links, stats) {
       if (counter > links.length) {
         console.log(links);
         if (stats) console.log(chalk.yellowBright("Stats: "), totals);
-        return { links, totals };
       }
     });
 
@@ -91,6 +89,7 @@ async function validateLinks(links, stats) {
     //   console.log(links);
     // }
   }); // forEach
+  //   return { links, totals };
 }
 
 module.exports = validateLinks;
