@@ -29,5 +29,39 @@ module.exports = {
       //   }
     ];
     return inquirer.prompt(questions);
+  },
+  askForValidation: () => {
+    const questions = [
+      {
+        name: "validate",
+        type: "input",
+        message: "Quieres validar los links?[y/n]:",
+        validate: function(value) {
+          if (value.length && (value === "y" || value === "n")) {
+            return true;
+          } else {
+            return "Porfavor ingresa una respuesta con y/n";
+          }
+        }
+      }
+    ];
+    return inquirer.prompt(questions);
+  },
+  askForStats: () => {
+    const questions = [
+      {
+        name: "stats",
+        type: "input",
+        message: "Quieres ver los totales?[y/n]:",
+        validate: function(value) {
+          if (value.length && (value === "y" || value === "n")) {
+            return true;
+          } else {
+            return "Porfavor ingresa una respuesta con y/n";
+          }
+        }
+      }
+    ];
+    return inquirer.prompt(questions);
   }
 };

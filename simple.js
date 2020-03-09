@@ -63,8 +63,8 @@ async function validateLinks(links, stats) {
         links[i].status = `${statusCode} OK ${link.text}`;
         if (counter > links.length) {
           console.log(links);
-          if (stats) console.log("Stats: ", totals);
-          return links;
+          if (stats) console.log(chalk.yellowBright("Stats: "), totals);
+          return { links, totals };
         }
       }
       // res.on("data", d => {
@@ -80,8 +80,8 @@ async function validateLinks(links, stats) {
         : `Fail ${error.code} ${link.href}`;
       if (counter > links.length) {
         console.log(links);
-        if (stats) console.log("Stats: ", totals);
-        return links;
+        if (stats) console.log(chalk.yellowBright("Stats: "), totals);
+        return { links, totals };
       }
     });
 
@@ -92,3 +92,5 @@ async function validateLinks(links, stats) {
     // }
   }); // forEach
 }
+
+module.exports = validateLinks;

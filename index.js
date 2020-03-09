@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const mdLinks = require("./md-links");
+const validateLinks = require("./simple");
 // fancy stuff
 const chalk = require("chalk");
 const clear = require("clear");
@@ -14,6 +15,15 @@ async function init() {
     chalk.green(figlet.textSync("by BlisS"))
   );
   const responses = await questions.askForTheFile();
-  mdLinks(responses.uriFile);
+  let links = await mdLinks(responses.uriFile);
+  let validate = await questions.askForValidation();
+  validate = validate.validate === "y" ? true : false;
+  if (validate) {
+    let stats = await questions.askForStats();
+    stats = stats.stats === "y" ? true : false;
+    await validateLinks(links, stats);
+  } else {
+    console.log(links);
+  }
 }
 init();
