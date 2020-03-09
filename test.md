@@ -1,15 +1,18 @@
 # mijo
 
-[blissito]('www.fixter.org')
+[Laboratoria]('www.laboratoria.la')
+
+[Fixter]('fixter.org')
 
 > Saca los chispos mijo
 
-[mijo]('www.fixter.camp')
+[Bootcamp online]('www.fixter.camp')
 
-![Imagen]('http://link.com')
+![Imagen fake]('http://link.com')
 
 ## Titulo h2
 
-parrafo lorem [otro Link]('http://www.google.com')
+parrafo lorem [Google oficial]('www.google.com')
 
-- Link más: [dentro de puntos]("http://www.firebasemx.com")
+- Link más: [Firebase en viñetas]("firebase.google.com")
+- [Blissito]('www.instagram.com/hectorbliss/')

@@ -2,7 +2,11 @@
   "name": "md-links",
   "version": "0.1.0",
   "bin": {
-    "bliss": "./index.js"
+    "bliss": "./index.js",
+    "md-links": "./simple.js"
+  },
+  "scripts": {
+    "start": "./index.js"
   },
   "dependencies": {
     "chalk": "^3.0.0",
