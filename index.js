@@ -28,4 +28,4 @@ async function init() {
   }
 }
 init();
-module.exports = mdLinks;
+exports.mdLinks = mdLinks;
