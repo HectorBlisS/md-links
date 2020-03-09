@@ -27,5 +27,5 @@ async function init() {
     console.log(links);
   }
 }
-init();
+// init();
 exports.mdLinks = mdLinks;
