@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const chalk = require("chalk");
 const http = require("http");
 const https = require("https");
